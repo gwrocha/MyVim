@@ -1,0 +1,95 @@
+
+MODOS:
+ - Normal/Comandos
+ - Inserção;
+ - Seleção;
+
+ATALHOS:
+
+l -> Direita
+h -> Esquerda
+j -> Baixo
+k -> Cima
+gg -> Começo do arquivo
+shift + g -> Fim do arquivo
+b -> Volta o cursor palavra por palavra
+w -> Avança o cursor palavra por palavra
+u -> Desfazer
+ctrl + r -> Refazer
+y -> copiar
+x -> recorta
+p -> colar a baixo
+shift + p -> colar a cima
+dd -> Apaga linha atual
+r -> troca caractere
+o -> Entra no modo de inserção em uma linha logo a baixo
+shift + o -> Entra no modo de inserção em uma linha logo a cima
+shift + i -> Entra em modo de inserção no começo da linha atual
+shift + a -> Entra em modo de inserção no final da linha atual
+v -> Modo de seleção de caractere
+shift + v -> Modo de seleção de linha
+ctrl + v -> Modo de seleção de bloco
+ctrl + n -> completa palaras que já foram escritas
+== -> identa o texto
+/[texto] -> busca no arquivo
+n -> próximo resultado da busca
+shift + n -> retorna um resultado da busca
+q -> modo de gravaçãoo de comandos
+	--após o q seleciona-se uma tecla e inicia-se a gravação de comandos, o q finaliza essa gravação de comandos e para reproduzir basta @[tecla]
+
+:vs [nome_arquivo] -> abre um novo arquivo à esquerda dividindo a tela 
+:sp [nome_arquivo] -> abre um novo arquivo à cima dividindo a tela 
+ctrl + ww -> Navega entre os arquivos
+ctrl + w[direcional] -> Navega entre os arquivos em uma determiada direção
+
+:%s/[old]/[new]/[options] -> Comando para substiuir text
+	\ - scapa a barra /
+	options:	
+		g - considera o arquivo todo
+		c - aparece opção para escolher
+
+NerdTree
+o - abre o arquivo com o cursor nele
+shift + o - abre o arquivo com o cursor no nerdtree
+s - abre arquivo dividindo a tela lado a lado com o cursor no arquivo
+gs - abre arquivo dividindo a tela lado a lado com o cursor no nerdtree
+i - abre arquivo dividindo a tela cima/baixo com o cursor no arquivo
+gi - abre arquivo dividindo a tela cima/baixo com o cursor no nerdtree
+p - abre arquivo em uma tab com o cursor na tab aberta
+gp - abre arquivo em uma tab com o cursor na tab atual
+gt - altera para a próxima tab
+gT - altera para a tab anterior
+
+CONFIGURAÇÕES:
+colorscheme [name]
+ --schema de cores;
+
+set tabstop=[numero]
+ --tamanho da tab na visualização;
+
+set shiftwidth=[numero]
+ --tamanho da tab
+
+set backspace=2
+ --habilita para deletar coisas(não entendi)
+
+filetype plugin indent on
+ --identifica o tipo de arquivo e se tem algum plugin e identação espeficífica pra ele
+
+set number 
+ --mostra o número da linha
+
+set relativenumber
+ --a  contagem da linha é relativa à linha atual
+
+syntax on
+ --destaca textos de acordo com o tipo do arquivo
+
+set incsearch
+ --destaca palavras encontradas durante a busca
+
+set hlsearch
+--destaca os resultados encontrados durante uma busca
+
+Gerenciardor de plugins - pathogen
+Plugin para navegar entre arquivos - nerdtree
